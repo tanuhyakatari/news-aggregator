@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  db:
+    image: mysql:8.0
+    container_name: news-db
+    environment:
+      MYSQL_ROOT_PASSWORD: Tanuhya@2006
+      MYSQL_DATABASE: news_aggregator
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+
+  backend:
+    build: ./backend
+    container_name: news-backend
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: Tanuhya@2006
+      DB_NAME: news_aggregator
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+
+  frontend:
+    build: ./frontend
+    container_name: news-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3001:80"
+
+volumes:
+  db-data:
+

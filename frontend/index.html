@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sports News - News Aggregator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .news-item {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      width: 30%;
+      transition: transform 0.3s ease;
+    }
+
+    .news-item:hover {
+      transform: scale(1.05);
+    }
+
+    .news-item h2 {
+      color: #1e3a8a;
+    }
+
+    .news-item p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .news-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .speak-btn {
+      margin-top: 10px;
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .speak-btn:hover {
+      background-color: #2c499e;
+    }
+
+    .video-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-item {
+      width: 45%;
+      margin: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .video-item:hover {
+      transform: scale(1.05);
+    }
+
+    .link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .link a {
+      color: #1e3a8a;
+      font-size: 18px;
+      text-decoration: none;
+      border: 2px solid #1e3a8a;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .link a:hover {
+      background-color: #1e3a8a;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🏅 Sports News - Latest Updates and Highlights</header>
+
+  <div class="container">
+
+    <div class="news-item">
+      <h2>🏆 Football World Cup: Latest Updates</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/FIFA_World_Cup_Logo.svg/1200px-FIFA_World_Cup_Logo.svg.png" alt="Football World Cup">
+      <p>Stay updated with the latest matches, results, and news from the Football World Cup.</p>
+      <button class="speak-btn">🔊 Listen</button>
+    </div>
+
+    <div class="news-item">
+      <h2>🏀 NBA Finals: Team Analysis</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/NBA_logo.svg/1200px-NBA_logo.svg.png" alt="NBA Finals">
+      <p>In-depth analysis of NBA Finals teams, key players, and predictions.</p>
+      <button class="speak-btn">🔊 Listen</button>
+    </div>
+
+    <div class="news-item">
+      <h2>⚾ MLB Highlights</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/MLB_Logo.svg/1200px-MLB_Logo.svg.png" alt="MLB Highlights">
+      <p>Catch up on home runs, standout plays, and playoff developments.</p>
+      <button class="speak-btn">🔊 Listen</button>
+    </div>
+
+    <div class="news-item">
+      <h2>🎾 Wimbledon: Star Performances</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Wimbledon_logo.svg/1200px-Wimbledon_logo.svg.png" alt="Wimbledon">
+      <p>Highlights from Wimbledon including stunning matches and champion runs.</p>
+      <button class="speak-btn">🔊 Listen</button>
+    </div>
+
+    <div class="news-item">
+      <h2>🏏 Cricket World Cup: Upsets and Victories</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/ICC_Cricket_World_Cup_Logo.svg/1200px-ICC_Cricket_World_Cup_Logo.svg.png" alt="Cricket World Cup">
+      <p>Shocking results and thrilling performances from the Cricket World Cup.</p>
+      <button class="speak-btn">🔊 Listen</button>
+    </div>
+
+    <div class="news-item">
+      <h2>🎮 Esports: League of Legends Finals</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/en/7/7f/League_of_Legends_logo.png" alt="Esports LOL">
+      <p>Top esports teams battle it out in the thrilling LoL World Championship finals.</p>
+      <button class="speak-btn">🔊 Listen</button>
+    </div>
+
+  </div>
+
+  <div class="video-container">
+    <div class="video-item">
+      <iframe src="https://www.youtube.com/embed/nEXh_3ZT0iE" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-item">
+      <iframe src="https://www.youtube.com/embed/YOhyv9Sp1CI?start=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.speak-btn').forEach(button => {
+      button.addEventListener('click', function () {
+        const text = this.previousElementSibling.textContent;
+        const utterance = new SpeechSynthesisUtterance(text);
+        speechSynthesis.cancel(); // Stop any ongoing speech
+        speechSynthesis.speak(utterance);
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .register-container {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 40px;
+      margin: 50px auto;
+      width: 350px;
+      text-align: center;
+    }
+
+    .register-container h1 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .register-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .register-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .register-container button:hover {
+      background-color: #1e8449;
+    }
+
+    .register-container a {
+      display: block;
+      margin-top: 15px;
+      color: #2980b9;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="register-container">
+      <h1>Create Your Account</h1>
+      <form action="login.html" method="post">
+        <input type="text" placeholder="Full Name" name="name" required />
+        <input type="email" placeholder="Email Address" name="email" required />
+        <input type="tel" placeholder="Phone Number" name="phone" required />
+        <input type="password" placeholder="Password" name="password" required />
+        <input type="password" placeholder="Confirm Password" name="confirm-password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+      <a href="login.html">Already have an account? Log in</a>
+    </div>
+  </main>
+</body>
+</html>

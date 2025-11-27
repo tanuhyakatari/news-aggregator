@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1c1c1c, #444);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .background-shapes .circle,
+  .background-shapes .square {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .background-shapes .circle {
+    width: 300px;
+    height: 300px;
+    background: #f39c12;
+    top: 5%;
+    left: -100px;
+  }
+  
+  .background-shapes .square {
+    width: 400px;
+    height: 400px;
+    background: #2980b9;
+    bottom: -50px;
+    right: -150px;
+    border-radius: 10%;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .login-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 380px;
+    z-index: 1;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  .brand-logo {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  .login-card h2 {
+    margin-bottom: 8px;
+  }
+  
+  .subtitle {
+    color: #777;
+    font-size: 0.95em;
+    margin-bottom: 24px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85em;
+    margin-bottom: 16px;
+    color: #555;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #2980b9;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #1f6391;
+  }
+  
+  .register-msg {
+    margin-top: 16px;
+    font-size: 0.9em;
+  }
+  .register-msg a {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
